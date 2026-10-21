@@ -1,16 +1,10 @@
 # sigma_test
 
-A new Flutter project.
+## Architecture & State Management
+Aplikasi ini menggunakan state management Provider yang memisahkan UI & Logic.
 
-## Getting Started
+## Concurrency Handling
+Transfer Controller / View Model menggunakan synchronus _isLocked untuk menolak request / permintaan duplicate sebelum transaksi di forward ke Backend
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Shuffle PIN View
+Setiap PIN Sheet memiliki urutan PIN yang random / berbeda setaiap kali di buka untuk keamanan, dan juga metode shufflenya menggunakan random bawaan Dart dengan function Random.secure()
